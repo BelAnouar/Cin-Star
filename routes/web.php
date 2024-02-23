@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/admin', function () {
+    return view('adminDash');
+});
+Route::get('/statistics', function () {
+    return view('statistics');
+});
 
 Route::get("/featch", [MovieController::class, "fetchApiMovie"]);
