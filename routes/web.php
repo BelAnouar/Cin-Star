@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\SocialiteController;
 use App\Models\User;
 
 /*
@@ -26,6 +27,10 @@ Route::get('/', function () {
 
 
 Route::get("/featch", [MovieController::class, "fetchApiMovie"]);
+Route::get("auth/google", [SocialiteController::class, "redirectToGoogle"]);
+Route::get("auth/google/callback", [SocialiteController::class, "handleGoogle"]);
+Route::get("auth/github", [SocialiteController::class, "redirectToGithub"]);
+Route::get("auth/github/callback", [SocialiteController::class, "handleGithub"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -60,3 +65,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+
+
+Route::get("seat", function () {
+    return view("seat.index");
+});
