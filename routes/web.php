@@ -1,12 +1,13 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\ProviderController;
-
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::get('/', function () {
 Route::get('genre', function () {
     return view('genre');
 });
+
+
+Route::get("/featch", [MovieController::class, "fetchApiMovie"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
