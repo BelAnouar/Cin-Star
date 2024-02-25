@@ -2,8 +2,12 @@
     <!--/nav-->
     <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
         <div class="container">
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log" aria-hidden="true"></span>
-                    ProShowz </a></h1>
+            <h1>
+                <a class="navbar-brand" href="/home">
+                    <span class="fa fa-play icon-log" aria-hidden="true"></span>
+                    CineStar
+                </a>
+            </h1>
             <!-- if logo is image enable this
       <a class="navbar-brand" href="#index.html">
        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
