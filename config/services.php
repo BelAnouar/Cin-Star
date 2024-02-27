@@ -49,5 +49,4 @@ return [
     //     'redirect' => env('FACEBOOK_CLIENT_CALLBACK')
     // ],
 
-
 ];
