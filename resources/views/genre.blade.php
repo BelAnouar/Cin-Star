@@ -20,7 +20,7 @@ Author URL: http://w3layouts.com
 
 <body>
     <!-- header -->
-	@include('layouts.navigation')
+    @include('layouts.navigation')
     <!-- //header -->
     <!--/breadcrumbs -->
     <div class="w3l-breadcrumbs">
@@ -42,7 +42,7 @@ Author URL: http://w3layouts.com
                 <div class="owl-four owl-carousel owl-theme">
                     <div class="item vhny-grid">
                         <div class="box16">
-                            <a href="#">
+                            <a href="/single_film">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/banner1.jpg" alt="">
 
@@ -115,7 +115,7 @@ Author URL: http://w3layouts.com
                     </div>
                     <div class="item vhny-grid">
                         <div class="box16">
-                            <a href="#">
+                            <a href="/single_film">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/banner1.jpg" alt="">
 
@@ -248,8 +248,8 @@ Author URL: http://w3layouts.com
                     </div>
 
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
-                            <a href="#">
+                        <div class="box16 mb-/single_film">
+                            <a href="">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/m1.jpg" alt="">
                                 </figure>
@@ -563,7 +563,7 @@ Author URL: http://w3layouts.com
     <!--grids-sec2-->
     <!--//genre -->
     <!-- footer-66 -->
-     @include('layouts.footer')
+    @include('layouts.footer')
     <!--//footer-66 -->
 </body>
 
