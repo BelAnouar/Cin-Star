@@ -1,14 +1,15 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\MovieController;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\SocialiteController;
-use App\Models\User;
+use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,3 +81,6 @@ Route::get("seat", function () {
 Route::get("single_film", function () {
     return view("single_page_film");
 });
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/notify', [HomeController::class, 'notify']);
