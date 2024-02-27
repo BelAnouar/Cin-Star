@@ -1,7 +1,4 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
 <html lang="zxx">
 
@@ -24,7 +21,7 @@ Author URL: http://w3layouts.com
     <!-- header -->
     <header id="site-header" class="w3l-header fixed-top">
         <!--/nav-->
-        <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+        <nav class="px-3 py-0 navbar navbar-expand-lg navbar-light fill px-lg-0">
             <div class="container">
                 <h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"
                             aria-hidden="true"></span>
@@ -42,7 +39,7 @@ Author URL: http://w3layouts.com
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="ml-auto navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Dashboard</a>
                         </li>
@@ -60,8 +57,8 @@ Author URL: http://w3layouts.com
                     <!--/search-right-->
                     <!--/search-right-->
                     <div class="search-right">
-                        <a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span
-                                class="fa fa-search ml-3" aria-hidden="true"></span></a>
+                        <a href="#search" class="mt-4 btn search-hny mr-lg-3 mt-lg-0" title="search">Search <span
+                                class="ml-3 fa fa-search" aria-hidden="true"></span></a>
                         <!-- search popup -->
                         <div id="search" class="pop-overlay">
                             <div class="popup">
@@ -72,7 +69,7 @@ Author URL: http://w3layouts.com
                                             aria-hidden="true"></span></button>
                                 </form>
                                 <div class="browse-items">
-                                    <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
+                                    <h3 class="mt-4 hny-title two mt-md-5">Browse all:</h3>
                                     <ul class="search-items">
                                         <li><a href="genre.html">Action</a></li>
                                         <li><a href="genre.html">Drama</a></li>
@@ -150,7 +147,7 @@ Author URL: http://w3layouts.com
                 </div>
                 <div class="item">
                     <li>
-                        <div class="slider-info  banner-view banner-top1 bg bg2">
+                        <div class="slider-info banner-view banner-top1 bg bg2">
                             <div class="banner-info">
                                 <h3>Latest Online Movies</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para">
@@ -224,7 +221,7 @@ Author URL: http://w3layouts.com
     <!-- main-slider -->
     <!--grids-sec1-->
     <section class="w3l-grids">
-        <div class="grids-main py-5">
+        <div class="py-5 grids-main">
             <div class="container py-lg-3">
                 <div class="headerhny-title">
                     <div class="w3l-title-grids">
@@ -249,7 +246,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -268,7 +265,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -287,7 +284,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -306,7 +303,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -320,7 +317,7 @@ Author URL: http://w3layouts.com
     <!--//grids-sec1-->
     <!--grids-sec2-->
     <section class="w3l-grids">
-        <div class="grids-main py-5">
+        <div class="py-5 grids-main">
             <div class="container py-lg-3">
                 <div class="headerhny-title">
                     <div class="w3l-title-grids">
@@ -334,7 +331,7 @@ Author URL: http://w3layouts.com
                 </div>
                 <div class="owl-three owl-carousel owl-theme">
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
+                        <div class="mb-0 box16">
                             <a href="genre.html">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/n1.jpg" alt="">
@@ -344,7 +341,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -352,13 +349,13 @@ Author URL: http://w3layouts.com
                         </div>
                         <h3> <a class="title-gd" href="genre.html">No Time to Die</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <div class="button-center text-center mt-4">
+                        <div class="mt-4 text-center button-center">
                             <a href="genre.html" class="btn watch-button">Watch now</a>
                         </div>
 
                     </div>
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
+                        <div class="mb-0 box16">
                             <a href="genre.html">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/n2.jpg" alt="">
@@ -369,7 +366,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -377,12 +374,12 @@ Author URL: http://w3layouts.com
                         </div>
                         <h3> <a class="title-gd" href="genre.html">Mulan</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <div class="button-center text-center mt-4">
+                        <div class="mt-4 text-center button-center">
                             <a href="genre.html" class="btn watch-button">Watch now</a>
                         </div>
                     </div>
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
+                        <div class="mb-0 box16">
                             <a href="genre.html">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/n3.jpg" alt="">
@@ -393,7 +390,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -401,12 +398,12 @@ Author URL: http://w3layouts.com
                         </div>
                         <h3> <a class="title-gd" href="genre.html">Free Guy</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <div class="button-center text-center mt-4">
+                        <div class="mt-4 text-center button-center">
                             <a href="genre.html" class="btn watch-button">Watch now</a>
                         </div>
                     </div>
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
+                        <div class="mb-0 box16">
                             <a href="genre.html">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/n4.jpg" alt="">
@@ -417,7 +414,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -425,13 +422,13 @@ Author URL: http://w3layouts.com
                         </div>
                         <h3> <a class="title-gd" href="genre.html">My Spy</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <div class="button-center text-center mt-4">
+                        <div class="mt-4 text-center button-center">
                             <a href="genre.html" class="btn watch-button">Watch now</a>
                         </div>
 
                     </div>
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
+                        <div class="mb-0 box16">
                             <a href="genre.html">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/n5.jpg" alt="">
@@ -442,7 +439,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -450,12 +447,12 @@ Author URL: http://w3layouts.com
                         </div>
                         <h3> <a class="title-gd" href="genre.html">Scoob</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <div class="button-center text-center mt-4">
+                        <div class="mt-4 text-center button-center">
                             <a href="genre.html" class="btn watch-button">Watch now</a>
                         </div>
                     </div>
                     <div class="item vhny-grid">
-                        <div class="box16 mb-0">
+                        <div class="mb-0 box16">
                             <a href="genre.html">
                                 <figure>
                                     <img class="img-fluid" src="assets/images/n6.jpg" alt="">
@@ -466,7 +463,7 @@ Author URL: http://w3layouts.com
 
                                         </span>
 
-                                        <span class="post fa fa-heart text-right"></span>
+                                        <span class="text-right post fa fa-heart"></span>
                                     </h4>
                                 </div>
                                 <span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -474,7 +471,7 @@ Author URL: http://w3layouts.com
                         </div>
                         <h3> <a class="title-gd" href="genre.html">Downhill</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                        <div class="button-center text-center mt-4">
+                        <div class="mt-4 text-center button-center">
                             <a href="genre.html" class="btn watch-button">Watch now</a>
                         </div>
                     </div>
@@ -541,10 +538,10 @@ Author URL: http://w3layouts.com
     </section>
     <!-- //mid-slider-->
     <!--/tabs-->
-    <section class="w3l-albums py-5" id="projects">
+    <section class="py-5 w3l-albums" id="projects">
         <div class="container py-lg-4">
             <div class="row">
-                <div class="col-lg-12 mx-auto">
+                <div class="mx-auto col-lg-12">
                     <!--Horizontal Tab-->
                     <div id="parentHorizontalTab">
                         <ul class="resp-tabs-list hor_1">
@@ -557,7 +554,7 @@ Author URL: http://w3layouts.com
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html">
@@ -578,13 +575,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m5.jpg"
@@ -603,13 +600,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m4.jpg"
@@ -628,7 +625,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -636,7 +633,7 @@ Author URL: http://w3layouts.com
                                     </div>
                                     <!--//set1-->
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m1.jpg"
@@ -655,13 +652,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m2.jpg"
@@ -680,13 +677,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m3.jpg"
@@ -705,7 +702,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -713,7 +710,7 @@ Author URL: http://w3layouts.com
                                     </div>
                                     <!--//set1-->
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/n1.jpg"
@@ -729,13 +726,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/n2.jpg"
@@ -754,13 +751,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/n3.jpg"
@@ -779,7 +776,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -791,7 +788,7 @@ Author URL: http://w3layouts.com
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m1.jpg"
@@ -810,13 +807,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m2.jpg"
@@ -835,13 +832,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m3.jpg"
@@ -860,7 +857,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -868,7 +865,7 @@ Author URL: http://w3layouts.com
                                     </div>
                                     <!--//set1-->
                                     <!--/set2-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m7.jpg"
@@ -887,13 +884,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m8.jpg"
@@ -912,13 +909,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m9.jpg"
@@ -937,7 +934,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -949,7 +946,7 @@ Author URL: http://w3layouts.com
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set3-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m7.jpg"
@@ -968,13 +965,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m8.jpg"
@@ -993,13 +990,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m9.jpg"
@@ -1018,7 +1015,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -1026,7 +1023,7 @@ Author URL: http://w3layouts.com
                                     </div>
                                     <!--//set3-->
                                     <!--/set3-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m10.jpg"
@@ -1045,13 +1042,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m11.jpg"
@@ -1070,13 +1067,13 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="genre.html"><img src="assets/images/m12.jpg"
@@ -1095,7 +1092,7 @@ Author URL: http://w3layouts.com
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -1114,24 +1111,24 @@ Author URL: http://w3layouts.com
     <!-- footer-66 -->
     <footer class="w3l-footer">
         <section class="footer-inner-main">
-            <div class="footer-hny-grids py-5">
+            <div class="py-5 footer-hny-grids">
                 <div class="container py-lg-4">
                     <div class="text-txt">
                         <div class="right-side">
                             <div class="row footer-about">
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+                                <div class="mb-4 col-md-3 col-6 footer-img mb-lg-0">
                                     <a href="genre.html"><img class="img-fluid" src="assets/images/banner1.jpg"
                                             alt=""></a>
                                 </div>
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+                                <div class="mb-4 col-md-3 col-6 footer-img mb-lg-0">
                                     <a href="genre.html"><img class="img-fluid" src="assets/images/banner2.jpg"
                                             alt=""></a>
                                 </div>
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+                                <div class="mb-4 col-md-3 col-6 footer-img mb-lg-0">
                                     <a href="genre.html"><img class="img-fluid" src="assets/images/banner3.jpg"
                                             alt=""></a>
                                 </div>
-                                <div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+                                <div class="mb-4 col-md-3 col-6 footer-img mb-lg-0">
                                     <a href="genre.html"><img class="img-fluid" src="assets/images/banner4.jpg"
                                             alt=""></a>
                                 </div>
@@ -1139,7 +1136,7 @@ Author URL: http://w3layouts.com
                             <div class="row footer-links">
 
 
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
+                                <div class="mt-5 col-md-3 col-sm-6 sub-two-right">
                                     <h6>Movies</h6>
                                     <ul>
                                         <li><a href="#">Movies</a></li>
@@ -1150,7 +1147,7 @@ Author URL: http://w3layouts.com
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
+                                <div class="mt-5 col-md-3 col-sm-6 sub-two-right">
                                     <h6>Information</h6>
                                     <ul>
                                         <li><a href="index.html">Dashboard</a> </li>
@@ -1161,7 +1158,7 @@ Author URL: http://w3layouts.com
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
+                                <div class="mt-5 col-md-3 col-sm-6 sub-two-right">
                                     <h6>Locations</h6>
                                     <ul>
                                         <li><a href="genre.html">Asia</a></li>
@@ -1172,9 +1169,9 @@ Author URL: http://w3layouts.com
                                         <li><a href="genre.html">United Kingdom</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-3 col-sm-6 sub-two-right mt-5">
+                                <div class="mt-5 col-md-3 col-sm-6 sub-two-right">
                                     <h6>Newsletter</h6>
-                                    <form action="#" class="subscribe mb-3" method="post">
+                                    <form action="#" class="mb-3 subscribe" method="post">
                                         <input type="email" name="email" placeholder="Your Email Address"
                                             required="">
                                         <button><span class="fa fa-envelope-o"></span></button>
