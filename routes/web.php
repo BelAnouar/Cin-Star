@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FilmController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\SocialiteController;
 use App\Models\User;
@@ -63,6 +64,21 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+// admin routes
+Route::get('/admin/statistics', [FilmController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin', [FilmController::class, 'allFilm'])->name('admin.allFilm');
+Route::put('/admin/{id}', [FilmController::class, 'update'])->name('film.update');
+Route::post('/admin/store', [FilmController::class, 'store'])->name('film.store');
+Route::delete('/admin/{id}', [FilmController::class, 'destroy'])->name('film.delete');
+// end admin routes
+
+
+// statistics start
+Route::get('/statistics', function () { return view('admin.statistics');});
+// statistics end
+
 
 require __DIR__ . '/auth.php';
 
