@@ -1,100 +1,110 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
+<header id="site-header" class="w3l-header fixed-top">
+    <!--/nav-->
+    <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+        <div class="container">
+            <h1>
+                <a class="navbar-brand" href="/home">
+                    <span class="fa fa-play icon-log" aria-hidden="true"></span>
+                    CineStar
+                </a>
+            </h1>
+            <!-- if logo is image enable this
+      <a class="navbar-brand" href="#index.html">
+       <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+      </a> -->
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class="fa icon-expand fa-bars"></span>
+                <span class="fa icon-close fa-times"></span>
+            </button>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
-            </div>
-
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
-
-                            <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
-                    </x-slot>
-
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    @hasrole('admin')
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Dashboard</a>
+                        </li>
+                    @endhasrole
+                    <li class="nav-item">
+                        <a class="nav-link" href="/genre">Genre</a>
+                    </li>
+                    @auth
+                        <form action="{{ route('logout') }}">
                             @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
+                            <button class="nav-link">Logout</button>
                         </form>
-                    </x-slot>
-                </x-dropdown>
-            </div>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register">SignUp</a>
+                        </li>
+                    @endauth
+                </ul>
 
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                <!--/search-right-->
+                <!--/search-right-->
+                <div class="search-right">
+                    <a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span
+                            class="fa fa-search ml-3" aria-hidden="true"></span></a>
+                    <!-- search popup -->
+                    <div id="search" class="pop-overlay">
+                        <div class="popup">
+                            <form action="#" method="post" class="search-box">
+                                <input type="search" placeholder="Search your Keyword" name="search"
+                                    required="required" autofocus="">
+                                <button type="submit" class="btn"><span class="fa fa-search"
+                                        aria-hidden="true"></span></button>
+                            </form>
+                            <div class="browse-items">
+                                <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
+                                <ul class="search-items">
+                                    <li><a href="/genre">Action</a></li>
+                                    <li><a href="/genre">Drama</a></li>
+                                    <li><a href="/genre">Family</a></li>
+                                    <li><a href="/genre">Thriller</a></li>
+                                    <li><a href="/genre">Commedy</a></li>
+                                    <li><a href="/genre">Romantic</a></li>
+                                    <li><a href="/genre">Tv-Series</a></li>
+                                    <li><a href="/genre">Horror</a></li>
+                                    <li><a href="/genre">Action</a></li>
+                                    <li><a href="/genre">Drama</a></li>
+                                    <li><a href="/genre">Family</a></li>
+                                    <li><a href="/genre">Thriller</a></li>
+                                    <li><a href="/genre">Commedy</a></li>
+                                    <li><a href="/genre">Romantic</a></li>
+                                    <li><a href="/genre">Tv-Series</a></li>
+                                    <li><a href="/genre">Horror</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="close" href="#close">×</a>
+                    </div>
+                    <!-- /search popup -->
+                    <!--/search-right-->
+                </div>
+
+
             </div>
+            <!-- toggle switch for light and dark theme -->
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+            <!-- //toggle switch for light and dark theme -->
         </div>
-    </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
-        </div>
-    </div>
-</nav>
+    </nav>
+    <!--//nav-->
+</header>

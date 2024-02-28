@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('salle_de_cinemas', function (Blueprint $table) {
             $table->id();
+            $table->string('salle_name');
+            $table->bigInteger("number_seats");
             $table->timestamps();
         });
     }
