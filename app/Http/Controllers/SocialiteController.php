@@ -31,7 +31,7 @@ class SocialiteController extends Controller
             $finduser = User::where('social_id', $user->id)->first();
             if ($finduser) {
                 Auth::login($finduser);
-                return redirect()->route("home");
+                return redirect()->route("welcome");
             } else {
                 $newUser = User::create([
                     'name' => $user->name,
@@ -42,7 +42,7 @@ class SocialiteController extends Controller
 
                 ]);
                 Auth::login($newUser);
-                return redirect()->route("home");
+                return redirect()->route("welcome");
             }
         } catch (Exception $th) {
             dd($th->getMessage());
