@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\SocialiteController;
 use App\Models\User;
+use Spatie\Permission\Commands\Show;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,6 @@ Route::get("seat", function () {
     return view("seat.index");
 });
 
-Route::get("single_film", function () {
-    return view("single_page_film");
-});
+Route::get("single_film", [
+    MovieController::class, "show"
+]);

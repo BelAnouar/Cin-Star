@@ -45,12 +45,13 @@ Author URL: http://w3layouts.com
                         <div class="box16">
                             <a href="#">
                                 <figure>
-                                    <img class="img-fluid" src="assets/images/banner1.jpg" alt="">
+                                    <img class="img-fluid" src="{{ url($movie->image) }}" alt="">
 
                                 </figure>
                                 <div class="box-content">
-                                    <h3 class="title">Rocketman</h3>
-                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
+                                    <h3 class="title">{{ $movie->title }}</h3>
+                                    <h4> <span class="post"><span class="fa fa-clock-o"> </span>
+                                            {{ $movie->duration }}
 
                                         </span>
 
@@ -63,126 +64,62 @@ Author URL: http://w3layouts.com
                     </div>
                     <div>
                         <h3 class="title">Film Description</h3>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex error distinctio ab, nihil facilis
-                        labore, esse repellendus ipsa provident illum impedit et neque deserunt. Ullam adipisci facere
-                        officia fugiat aliquid suscipit quidem? Sit facilis nam rem illo sed fugiat accusantium,
-                        expedita facere officia dolore, repellat id quisquam nulla eligendi exercitationem explicabo
-                        omnis ratione doloribus! Adipisci molestiae harum, numquam nesciunt pariatur similique veritatis
-                        voluptatibus! Quam laboriosam asperiores nihil? Eaque ut ea suscipit, fugit ex accusantium ad,
-                        dolore voluptate consectetur molestiae doloremque sapiente excepturi porro sint pariatur omnis
-                        repudiandae impedit obcaecati non debitis, hic sit. Asperiores architecto commodi laborum sit
-                        beatae aliquid ratione provident nisi sunt, dicta corrupti qui a maiores nemo aperiam facere
-                        accusantium. Nisi harum laudantium asperiores architecto quas perferendis quidem a adipisci eum
-                        minus, impedit placeat neque illum veniam possimus id, excepturi molestiae officia ipsam quo,
-                        culpa quod aspernatur omnis deleniti. Inventore nihil aliquam veritatis. Quod necessitatibus
-                        numquam adipisci!
+                        {{ $movie->description }}
                     </div>
-                    <ul class="showcase">
-                        <li>
-                            <div class="seat"></div>
-                            <small>Available</small>
-                        </li>
-                        <li>
-                            <div class="seat selected"></div>
-                            <small>Selected</small>
-                        </li>
-                        <li>
-                            <div class="seat sold"></div>
-                            <small>Sold</small>
-                        </li>
-                    </ul>
+
+                    {{ count($movie->salle->zones) }}
                     <div class="container">
                         <div class="screen">
                             <svg class="" width="371" height="83" viewBox="0 0 371 83" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_f_7_187)">
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_7_187)">
+                                    <path d="M20.5406 62.2176C113.222 5.73831 249.588 8.33099 350.1 57.7466"
+                                        stroke="#FF06A4" stroke-width="10" stroke-linecap="round" />
+                                </g>
                                 <path d="M20.5406 62.2176C113.222 5.73831 249.588 8.33099 350.1 57.7466"
-                                    stroke="#FF06A4" stroke-width="10" stroke-linecap="round" />
-                            </g>
-                            <path d="M20.5406 62.2176C113.222 5.73831 249.588 8.33099 350.1 57.7466" stroke="#FF53C0"
-                                stroke-width="5" stroke-linecap="round" />
-                            <defs>
-                                <filter id="filter0_f_7_187" x="0.539917" y="0.268478" width="369.561"
-                                    height="81.9499" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                        result="shape" />
-                                    <feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur_7_187" />
-                                </filter>
-                            </defs>
-                        </svg>
+                                    stroke="#FF53C0" stroke-width="5" stroke-linecap="round" />
+                                <defs>
+                                    <filter id="filter0_f_7_187" x="0.539917" y="0.268478" width="369.561"
+                                        height="81.9499" filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                            result="shape" />
+                                        <feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur_7_187" />
+                                    </filter>
+                                </defs>
+                            </svg>
                         </div>
                         <div class="w-[100%]">
-                            <div class="row">
-                                <div >
-                                    <svg width="30" height="23" viewBox="0 0 30 23" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M-0.00244141 4.12256C-0.00244141 3.01799 0.892989 2.12256 1.99756 2.12256H3.99756C5.10213 2.12256 5.99756 3.01799 5.99756 4.12256V14.1291C5.99756 15.233 6.89199 16.1282 7.99592 16.1291L21.9959 16.1405C23.1011 16.1414 23.9976 15.2457 23.9976 14.1405V4.12256C23.9976 3.01799 24.893 2.12256 25.9976 2.12256H27.9976C29.1021 2.12256 29.9976 3.01799 29.9976 4.12256V16.1446C29.9976 16.146 29.9987 16.1471 30 16.1471C30.0014 16.1471 30.0025 16.1482 30.0025 16.1495L30.0011 17.8623C29.9991 20.2287 28.0792 22.1455 25.7128 22.1436L4.99347 22.1266C2.23365 22.1244 -0.00244141 19.8865 -0.00244141 17.1266V4.12256Z"
-                                        fill="#D9D9D9" />
-                                    <path
-                                        d="M6.99756 3.12256C6.99756 1.4657 8.3407 0.122559 9.99756 0.122559H19.9976C21.6544 0.122559 22.9976 1.4657 22.9976 3.12256V14.1226C22.9976 14.6748 22.5498 15.1226 21.9976 15.1226H7.99756C7.44527 15.1226 6.99756 14.6748 6.99756 14.1226V3.12256Z"
-                                        fill="#D9D9D9" />
-                                </svg>
-                                </div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
+                            <div class="zone-container">
+                                @foreach ($movie->salle->zones as $zone)
+                                    <h3>Zone: {{ $zone->name }}</h3>
+                                    {{-- {{$zone->nbre_seat}} --}}
+                                   {{count( $zone->seats)}}
+                                   
+                                    {{-- @foreach ($seats as $seatRow)
+                                        <div class="row">
+                                            @foreach ($seatRow as $seat)
+                                                <div class="seat">
+                                                    <svg width="30" height="23" viewBox="0 0 30 23"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       
+                                                        <path
+                                                            d="M-0.00244141 4.12256C-0.00244141 3.01799 0.892989 2.12256 1.99756 2.12256H3.99756C5.10213 2.12256 5.99756 3.01799 5.99756 4.12256V14.1291C5.99756 15.233 6.89199 16.1282 7.99592 16.1291L21.9959 16.1405C23.1011 16.1414 23.9976 15.2457 23.9976 14.1405V4.12256C23.9976 3.01799 24.893 2.12256 25.9976 2.12256H27.9976C29.1021 2.12256 29.9976 3.01799 29.9976 4.12256V16.1446C29.9976 16.146 29.9987 16.1471 30 16.1471C30.0014 16.1471 30.0025 16.1482 30.0025 16.1495L30.0011 17.8623C29.9991 20.2287 28.0792 22.1455 25.7128 22.1436L4.99347 22.1266C2.23365 22.1244 -0.00244141 19.8865 -0.00244141 17.1266V4.12256Z"
+                                                            fill="#D9D9D9" />
+                                                        <path
+                                                            d="M6.99756 3.12256C6.99756 1.4657 8.3407 0.122559 9.99756 0.122559H19.9976C21.6544 0.122559 22.9976 1.4657 22.9976 3.12256V14.1226C22.9976 14.6748 22.5498 15.1226 21.9976 15.1226H7.99756C7.44527 15.1226 6.99756 14.6748 6.99756 14.1226V3.12256Z"
+                                                            fill="#D9D9D9" />
+                                                    </svg>
+                                                    
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    @endforeach --}}
+                                @endforeach
                             </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat sold"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat sold"></div>
-                                <div class="seat"></div>
-                            </div>
+
+                        
                         </div>
                     </div>
                 </div>
@@ -413,31 +350,30 @@ Author URL: http://w3layouts.com
     const seats = document.querySelector(".row .seat:not(.sold)");
     const count = document.querySelector("count");
 
-    function updateSelectedCount(){
+    function updateSelectedCount() {
         const selectedSeats = document.querySelectorAll('.row .seat.selected');
-        const seatsIndex = [...selectedSeat].map(seat=> [...seats].indexOf(seat))
+        const seatsIndex = [...selectedSeat].map(seat => [...seats].indexOf(seat))
         localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
         const selectedSeatsCount = selectedSeats.length
         count.innerText = selectedSeatsCount
     }
 
-    function populateUI(){
+    function populateUI() {
         const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'))
-        if(selectedSeats !== null && selectedSeats.length > -1){
+        if (selectedSeats !== null && selectedSeats.length > -1) {
             seats.forEach(seat, index) => {
-                if(selectedSeats.indexOf(index) > -1){
+                if (selectedSeats.indexOf(index) > -1) {
                     seat.classList.add('selected');
                 }
             }
         }
     }
 
-    container.addEventListener('click' , e => {
-        if(e.target.classList.contains('seat') && !e.target.classList.contains('sold')){
+    container.addEventListener('click', e => {
+        if (e.target.classList.contains('seat') && !e.target.classList.contains('sold')) {
             e.target.classList.toggle('selected');
         }
     })
-
 </script>
 
 <!--//SEATS JS-->

@@ -19519,16 +19519,25 @@ input:checked+.mode-container i.gg-moon {
   margin-bottom: 30px;
 }
 
-.seat {
-  background-color: #444451;
-  height: 26px;
-  width: 32px;
-  margin: 3px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.zone-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px; /* Adjust as needed */
 }
 
-.seat.selected {
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr)); /* Adjust column width as needed */
+  gap: 10px; /* Adjust gap between seats as needed */
+}
+
+.seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+/* .seat.selected {
   background-color: green;
 }
 
@@ -19547,7 +19556,7 @@ input:checked+.mode-container i.gg-moon {
 .seat:not(.sold):hover {
   cursor: pointer;
   transform: scale(1.2);
-}
+} */
 
 .showcase .seat:not(.sold):hover {
   cursor: default;

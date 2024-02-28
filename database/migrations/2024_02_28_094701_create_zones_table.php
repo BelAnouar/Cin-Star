@@ -16,7 +16,7 @@ return new class extends Migration
             $table->bigInteger('nbre_seat');
             $table->bigInteger('nbre_row');
             $table->timestamps();
-            $table->foreignId('salle_id')->reference('id')->on('salle_de_cinemas')->nullable();
+            $table->foreignId('salle_de_cinema_id')->reference('id')->on('salle_de_cinemas')->nullable();
         });
     }
 

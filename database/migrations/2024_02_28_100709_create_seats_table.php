@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('seats', function (Blueprint $table) {
             $table->id();
             $table->string("name");
+            $table->boolean('isbooking')->default(false);
             $table->timestamps();
-            $table->foreignId('Zone_Id')->reference('id')->on('zones')->nullable();
+            $table->foreignId('zone_id')->reference('id')->on('zones')->nullable();
         });
         schema::table('reservations', function (Blueprint $table) {
             $table->foreignId('seat_id')->references('id')->on('seats')->nullable();
