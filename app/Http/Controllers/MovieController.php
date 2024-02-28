@@ -32,4 +32,9 @@ class MovieController extends Controller
             }
         }
     }
+
+    public function displayMovies(){
+        $movies = Movie::all();
+        return view('welcome', compact('movies'));
+    }
 }

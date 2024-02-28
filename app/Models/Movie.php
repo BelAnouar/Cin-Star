@@ -8,6 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title',
+        'year',
+        'duration',
+        'release_date',
+        'Awards',
+        'genre',
+        'actors',
+        'Poster',
+        'type',
+        'description',
+    ];
 
     public function actor()
     {

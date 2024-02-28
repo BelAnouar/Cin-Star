@@ -14858,8 +14858,9 @@ header.nav-fixed {
 }
 
 .w3l-main-slider .banner-view {
-  background: url(../images/banner1.jpg) no-repeat center;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 500px;
   position: relative;
   z-index: 0;
