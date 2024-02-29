@@ -22,9 +22,9 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('genre', function () {
     return view('genre');
@@ -83,4 +83,5 @@ Route::get("single_film", function () {
 });
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [MovieController::class, 'displayMovies']);
 Route::get('/notify', [HomeController::class, 'notify']);
