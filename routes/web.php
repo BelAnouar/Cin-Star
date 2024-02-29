@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\FilmController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\SocialiteController;
 use App\Models\User;
@@ -72,11 +71,12 @@ Route::middleware('auth')->group(function () {
 
 
 // admin routes
-Route::get('/admin/statistics', [FilmController::class, 'index'])->name('admin.dashboard');
-Route::get('/admin', [FilmController::class, 'allFilm'])->name('admin.allFilm');
-Route::put('/admin/{id}', [FilmController::class, 'update'])->name('film.update');
-Route::post('/admin/store', [FilmController::class, 'store'])->name('film.store');
-Route::delete('/admin/{id}', [FilmController::class, 'destroy'])->name('film.delete');
+Route::get('/admin/statistics', [MovieController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin/allmovie', [MovieController::class, 'allMovie'])->name('admin.allMovie');
+Route::put('/admin/{id}', [MovieController::class, 'update'])->name('movie.update');
+Route::post('/admin/store', [MovieController::class, 'store'])->name('movie.store');
+Route::delete('/admin/{id}', [MovieController::class, 'destroy'])->name('movie.delete');
+
 // end admin routes
 
 
