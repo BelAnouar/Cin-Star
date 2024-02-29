@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FilmController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -28,6 +29,12 @@ Route::get('genre', function () {
 });
 
 Route::get('/' , [MovieController::class , "displayMovies"])->name('displayMovies');
+Route::get('/admin', function () {
+    return view('adminDash');
+});
+Route::get('/statistics', function () {
+    return view('statistics');
+});
 
 Route::get("/featch", [MovieController::class, "fetchApiMovie"]);
 Route::get("auth/google", [SocialiteController::class, "redirectToGoogle"]);
@@ -45,6 +52,10 @@ Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect'])
 
 Route::get('/auth/callback', [ProviderController::class, 'callback']);
 
+
+// notif
+Route::get('send', [ProviderController::class, 'callback']);
+// notif
 // Route::get('/auth/callback', function () {
 //     $githubUser = Socialite::driver('github')->user();
 
@@ -68,6 +79,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+// admin routes
+Route::get('/admin/statistics', [FilmController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin', [FilmController::class, 'allFilm'])->name('admin.allFilm');
+Route::put('/admin/{id}', [FilmController::class, 'update'])->name('film.update');
+Route::post('/admin/store', [FilmController::class, 'store'])->name('film.store');
+Route::delete('/admin/{id}', [FilmController::class, 'destroy'])->name('film.delete');
+// end admin routes
+
+
+// statistics start
+Route::get('/statistics', function () { return view('admin.statistics');});
+// statistics end
+
+
 require __DIR__ . '/auth.php';
 
 
@@ -81,4 +107,4 @@ Route::get("single_film", function () {
 });
 
 // Route::get('/', [HomeController::class, 'index']);
-Route::get('/notify', [HomeController::class, 'notify']);
+Route::get('/notify', [HomeController::class, 'sendnotification']);

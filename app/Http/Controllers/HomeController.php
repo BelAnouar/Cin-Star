@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use App\Notifications\UserFollowNotification;
+use App\Models\User;
+use Notification;
+use App\Notifications\SendEmailNotification;
 
 class HomeController extends Controller
 {
@@ -12,11 +13,22 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
-    public function notify()
+
+    public function sendnotification()
     {
-        if (auth()->user()) {
-            $user = User::first();
-            auth()->user()->notify(new UserFollowNotification($user));
+        $users = User::all();
+        $details = [
+            'greeting' => 'Hi!',
+            'body' => 'I hope you are doing well. Thank you for your reservation.',
+            'actionText' => 'Print your reservation',
+            'actionUrl' => '/',
+            'lastLine' => 'last',
+        ];
+
+        foreach ($users as $user) {
+            Notification::send($user, new SendEmailNotification($details));
         }
+
+        dd('done');
     }
 }

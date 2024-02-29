@@ -7,59 +7,49 @@ use Illuminate\Http\Request;
 
 class FilmController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $filmCount = Film::count();
+        return view('admin.dashboard', compact('filmCount'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function allfilm()
     {
-        //
+        $films = Film::all();
+        return view('admin.adminDash', compact('films'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'filmName' => 'required',
+        ]);
+
+        Film::create([
+            'name' => $request->filmName,
+        ]);
+        
+        return redirect()->route('admin.allFilm');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Film $film)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'filmName' => 'required',
+        ]);
+
+        $film = Film::findOrFail($id);
+        $film->update([
+            'filmName' => $request->filmName,
+        ]);
+
+        return redirect()->route('film.allfilm');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Film $film)
+    public function destroy($id)
     {
-        //
-    }
+        $film = Film::findOrFail($id);
+        $film->delete();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Film $film)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Film $film)
-    {
-        //
+        return redirect()->route('film.allfilm');
     }
 }
+
