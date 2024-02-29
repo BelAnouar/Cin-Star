@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cinemas', function (Blueprint $table) {
+        Schema::create('acteur_movie', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('acteur_id');
+            $table->unsignedBigInteger('movie_id');
             $table->timestamps();
+
+            $table->foreign('acteur_id')->references('id')->on('acteurs')->onDelete('cascade');
+            $table->foreign('movie_id')->references('id')->on('movies')->onDelete('cascade');
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cinemas');
+        Schema::dropIfExists('acteur_movie');
     }
 };

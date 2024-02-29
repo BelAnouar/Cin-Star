@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('films', function (Blueprint $table) {
+
+        Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->timestamps();
+
+            $table->foreignId('salle_id')->references('id')->on('salle_de_cinemas')->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->nullable();
         });
     }
 
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('films');
+        Schema::dropIfExists('reservations');
     }
 };

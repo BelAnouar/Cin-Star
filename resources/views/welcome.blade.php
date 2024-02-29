@@ -38,7 +38,7 @@
     <!-- main-slider -->
     <!--grids-sec2-->
     <section class="w3l-grids">
-        <div class="grids-main py-5">
+        <div class="py-5 grids-main">
             <div class="container py-lg-3">
                 <div class="headerhny-title">
                     <div class="w3l-title-grids">
@@ -142,10 +142,10 @@
     </section>
     <!-- //mid-slider-->
     <!--/tabs-->
-    <section class="w3l-albums py-5" id="projects">
+    <section class="py-5 w3l-albums" id="projects">
         <div class="container py-lg-4">
             <div class="row">
-                <div class="col-lg-12 mx-auto">
+                <div class="mx-auto col-lg-12">
                     <!--Horizontal Tab-->
                     <div id="parentHorizontalTab">
                         <ul class="resp-tabs-list hor_1">
@@ -158,7 +158,7 @@
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre">
@@ -179,13 +179,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m5.jpg" class="img-fluid"
@@ -204,13 +204,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m4.jpg" class="img-fluid"
@@ -229,7 +229,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -237,7 +237,7 @@
                                     </div>
                                     <!--//set1-->
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m1.jpg" class="img-fluid"
@@ -256,13 +256,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m2.jpg" class="img-fluid"
@@ -281,13 +281,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m3.jpg" class="img-fluid"
@@ -306,7 +306,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -314,7 +314,7 @@
                                     </div>
                                     <!--//set1-->
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/n1.jpg" class="img-fluid"
@@ -330,13 +330,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/n2.jpg" class="img-fluid"
@@ -355,13 +355,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/n3.jpg" class="img-fluid"
@@ -380,7 +380,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -392,7 +392,7 @@
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m1.jpg" class="img-fluid"
@@ -411,13 +411,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m2.jpg" class="img-fluid"
@@ -436,13 +436,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m3.jpg" class="img-fluid"
@@ -461,7 +461,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -469,7 +469,7 @@
                                     </div>
                                     <!--//set1-->
                                     <!--/set2-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m7.jpg" class="img-fluid"
@@ -488,13 +488,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m8.jpg" class="img-fluid"
@@ -513,13 +513,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m9.jpg" class="img-fluid"
@@ -538,7 +538,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -550,7 +550,7 @@
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set3-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m7.jpg" class="img-fluid"
@@ -569,13 +569,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m8.jpg" class="img-fluid"
@@ -594,13 +594,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m9.jpg" class="img-fluid"
@@ -619,7 +619,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
@@ -627,7 +627,7 @@
                                     </div>
                                     <!--//set3-->
                                     <!--/set3-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m10.jpg" class="img-fluid"
@@ -646,13 +646,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m11.jpg" class="img-fluid"
@@ -671,13 +671,13 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                    <div class="mt-0 col-lg-4 new-relise-gd mt-lg-0">
                                         <div class="slider-info">
                                             <div class="img-circle">
                                                 <a href="/genre"><img src="assets/images/m12.jpg" class="img-fluid"
@@ -696,7 +696,7 @@
 
                                                     </span>
 
-                                                    <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                                 </h4>
                                             </div>
                                         </div>
