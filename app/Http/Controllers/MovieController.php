@@ -43,4 +43,24 @@ class MovieController extends Controller
 
         return view("single_page_film", ["movie" => $movie]);
     }
+    public function search(Request $request)
+    {
+        $searchData = $request->input('search');
+        $filmsSearch = Movie::where('title', 'like', '%' . $searchData . '%')->get();
+                    // ->orWhereHas('genre', function ($query) use ($searchData) {
+                    //     $query->where('name', 'like', '%' . $searchData . '%');
+                    // })
+                    // ->orWhereHas('actors', function ($query) use ($searchData) {
+                    //     $query->where('name', 'like', '%' . $searchData . '%');
+                    // })
+                    // ->orWhereHas('salle', function ($query) use ($searchData) {
+                    //     $query->where('name', 'like', '%' . $searchData . '%');
+                    // })
+                   
+                    // dd($filmsSearch);
+
+         return view('welcome', compact('filmsSearch'));
+        // dd($filmsSearch);
+      
+    }
 }

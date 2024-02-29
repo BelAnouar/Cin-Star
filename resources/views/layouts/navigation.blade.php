@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
         <div class="container">
             <h1>
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="/">
                     <span class="fa fa-play icon-log" aria-hidden="true"></span>
                     CineStar
                 </a>
@@ -53,33 +53,16 @@
                     <!-- search popup -->
                     <div id="search" class="pop-overlay">
                         <div class="popup">
-                            <form action="#" method="post" class="search-box">
+                            <form action="{{ route('movie.search')}}" method="get" class="search-box">
                                 <input type="search" placeholder="Search your Keyword" name="search"
                                     required="required" autofocus="">
                                 <button type="submit" class="btn"><span class="fa fa-search"
                                         aria-hidden="true"></span></button>
                             </form>
                             <div class="browse-items">
-                                <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
-                                <ul class="search-items">
-                                    <li><a href="/genre">Action</a></li>
-                                    <li><a href="/genre">Drama</a></li>
-                                    <li><a href="/genre">Family</a></li>
-                                    <li><a href="/genre">Thriller</a></li>
-                                    <li><a href="/genre">Commedy</a></li>
-                                    <li><a href="/genre">Romantic</a></li>
-                                    <li><a href="/genre">Tv-Series</a></li>
-                                    <li><a href="/genre">Horror</a></li>
-                                    <li><a href="/genre">Action</a></li>
-                                    <li><a href="/genre">Drama</a></li>
-                                    <li><a href="/genre">Family</a></li>
-                                    <li><a href="/genre">Thriller</a></li>
-                                    <li><a href="/genre">Commedy</a></li>
-                                    <li><a href="/genre">Romantic</a></li>
-                                    <li><a href="/genre">Tv-Series</a></li>
-                                    <li><a href="/genre">Horror</a></li>
-                                </ul>
-                            </div>
+                                {{-- <h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3> --}}
+                               
+                        </div>
                         </div>
                         <a class="close" href="#close">×</a>
                     </div>

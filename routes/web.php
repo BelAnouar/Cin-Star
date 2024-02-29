@@ -84,4 +84,5 @@ Route::get("single_film", function () {
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/', [MovieController::class, 'displayMovies']);
+Route::get('/search', [MovieController::class, 'search'])->name('movie.search');
 Route::get('/notify', [HomeController::class, 'notify']);

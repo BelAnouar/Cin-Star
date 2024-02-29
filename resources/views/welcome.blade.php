@@ -3,34 +3,36 @@
     <section class="w3l-main-slider position-relative" id="home">
         <div class="companies20-content">
             <div class="owl-one owl-carousel owl-theme">
-                @foreach ($movies as $movie)
-                    @php
-                        if ($loop->iteration > 3) {
-                            break;
-                        }
-                    @endphp
-                    <div class="item"
-                        style="background:url({{ $movie->Poster }}) no-repeat center;background-size: cover;">
-                        <li>
-                            <div class="slider-info banner-view bg bg2">
-                                <div class="banner-info">
-                                    <h3>{{ $movie->title }}</h3>
-                                    <p>{{ $movie->description }}</p>
-                                    <a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
-                                        <span class="video-play-icon">
-                                            <span class="fa fa-play"></span>
-                                        </span>
-                                        <h6>Watch Trailer</h6>
-                                    </a>
-                                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-                                    <div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
-                                        <iframe src="{{ $movie->Poster }}" allowfullscreen=""></iframe>
+                @if (!isset($filmsSearch))
+                    @foreach ($movies as $movie)
+                        @php
+                            if ($loop->iteration > 3) {
+                                break;
+                            }
+                        @endphp
+                        <div class="item"
+                            style="background:url({{ $movie->Poster }}) no-repeat center;background-size: cover;">
+                            <li>
+                                <div class="slider-info banner-view bg bg2">
+                                    <div class="banner-info">
+                                        <h3>{{ $movie->title }}</h3>
+                                        <p>{{ $movie->description }}</p>
+                                        <a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
+                                            <span class="video-play-icon">
+                                                <span class="fa fa-play"></span>
+                                            </span>
+                                            <h6>Watch Trailer</h6>
+                                        </a>
+                                        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                        <div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
+                                            <iframe src="{{ $movie->Poster }}" allowfullscreen=""></iframe>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </div>
-                @endforeach
+                            </li>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
@@ -39,83 +41,124 @@
     <!--grids-sec2-->
     <section class="w3l-grids">
         <div class="grids-main py-5">
-            <div class="container py-lg-3">
-                <div class="headerhny-title">
-                    <div class="w3l-title-grids">
-                        <div class="headerhny-left">
-                            <h3 class="hny-title">New Releases</h3>
-                        </div>
-                        <div class="headerhny-right text-lg-right">
-                            <h4><a class="show-title" href="/genre">Show all</a></h4>
+            @if (isset($filmsSearch))
+                <div class="container py-lg-3">
+                    <div class="headerhny-title">
+                        <div class="w3l-title-grids">
+                            <div class="headerhny-left">
+                                <h3 class="hny-title">THE FILM THAT YOU SEARCH :</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="owl-three owl-carousel owl-theme">
-                    @foreach ($movies as $movie)
-                        @php
-                            if ($loop->iteration > 6) {
-                                break;
-                            }
-                        @endphp
-                        <div class="item vhny-grid">
-                            <div class="box16 mb-0">
-                                <a href="/genre">
-                                    <figure>
-                                        <img class="img-fluid" src="{{ $movie->Poster }}" alt="">
-                                    </figure>
-                                    <div class="box-content">
-                                        <h4> <span class="post"><span class="fa fa-clock-o"> </span>
-                                                {{ $movie->duration }}
+                    <div class="">
+                        @foreach ($filmsSearch as $movie)
+                            <div class="item vhny-grid w-45 h-45">
+                                <div class="box16 mb-0">
+                                    <a href="/genre">
+                                        <figure>
+                                            <img class="img-fluid" src="{{ $movie->Poster }}" alt="">
+                                        </figure>
+                                        <div class="box-content">
+                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span>
+                                                    {{ $movie->duration }}
 
-                                            </span>
+                                                </span>
 
-                                            <span class="post fa fa-heart text-right"></span>
-                                        </h4>
-                                    </div>
-                                    <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                </a>
+                                                <span class="post fa fa-heart text-right"></span>
+                                            </h4>
+                                        </div>
+                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                                <h3> <a class="title-gd" href="/genre">{{ $movie->title }}</a></h3>
+                                <p>{{ $movie->description }}</p>
+                                <div class="button-center text-center mt-4">
+                                    <a href="{{route('')}}" class="btn watch-button">Reserve now</a>
+                                </div>
                             </div>
-                            <h3> <a class="title-gd" href="/genre">{{ $movie->title }}</a></h3>
-                            <p>{{ $movie->description }}</p>
-                            <div class="button-center text-center mt-4">
-                                <a href="" class="btn watch-button">Watch now</a>
+                        @endforeach
+                    </div>
+                </div>
+            @else
+                <div class="container py-lg-3">
+                    <div class="headerhny-title">
+                        <div class="w3l-title-grids">
+                            <div class="headerhny-left">
+                                <h3 class="hny-title">New Releases</h3>
+                            </div>
+                            <div class="headerhny-right text-lg-right">
+                                <h4><a class="show-title" href="/genre">Show all</a></h4>
                             </div>
                         </div>
-                    @endforeach
-                </div>
-            </div>
+                    </div>
+                    <div class="owl-three owl-carousel owl-theme">
+                        @foreach ($movies as $movie)
+                            @php
+                                if ($loop->iteration > 6) {
+                                    break;
+                                }
+                            @endphp
+                            <div class="item vhny-grid">
+                                <div class="box16 mb-0">
+                                    <a href="/genre">
+                                        <figure>
+                                            <img class="img-fluid" src="{{ $movie->Poster }}" alt="">
+                                        </figure>
+                                        <div class="box-content">
+                                            <h4> <span class="post"><span class="fa fa-clock-o"> </span>
+                                                    {{ $movie->duration }}
 
+                                                </span>
+
+                                                <span class="post fa fa-heart text-right"></span>
+                                            </h4>
+                                        </div>
+                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                                <h3> <a class="title-gd" href="/genre">{{ $movie->title }}</a></h3>
+                                <p>{{ $movie->description }}</p>
+                                <div class="button-center text-center mt-4">
+                                    <a href="" class="btn watch-button">Watch now</a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
         </div>
     </section>
     <!--grids-sec2-->
     <!--mid-slider -->
-    <section class="w3l-mid-slider position-relative"
-        style="background: url({{ $movie->Poster }}) no-repeat center;background-size: cover;">
+    <section class="w3l-mid-slider position-relative">
         <div class="companies20-content">
             <div class="owl-mid owl-carousel owl-theme">
-                @foreach ($movies as $movie)
-                    @php
-                        if ($loop->iteration < 9 || $loop->iteration > 15) {
-                            continue;
-                        }
-                    @endphp
-                    <div class="item">
-                        <li>
-                            <div class="slider-info mid-view bg bg2">
-                                <div class="container">
-                                    <div class="mid-info">
-                                        <span class="sub-text">{{ $movie->genre }}</span>
-                                        <h3>{{ $movie->title }}</h3>
-                                        <p>{{ $movie->year }}‧{{ $movie->type }} ‧ {{ $movie->duration }}</p>
-                                        <a class="watch" href="/genre"><span class="fa fa-play"
-                                                aria-hidden="true"></span>
-                                            Watch Trailer</a>
+                @if (!isset($filmsSearch))
+                    @foreach ($movies as $movie)
+                        @php
+                            if ($loop->iteration < 9 || $loop->iteration > 15) {
+                                continue;
+                            }
+                        @endphp
+                        <div class="item"
+                            style="background: url({{ $movie->Poster }}) no-repeat center;background-size: cover">
+                            <li>
+                                <div class="slider-info mid-view bg bg2">
+                                    <div class="container">
+                                        <div class="mid-info">
+                                            <span class="sub-text">{{ $movie->genre }}</span>
+                                            <h3>{{ $movie->title }}</h3>
+                                            <p>{{ $movie->year }}‧{{ $movie->type }} ‧ {{ $movie->duration }}</p>
+                                            <a class="watch" href="/genre"><span class="fa fa-play"
+                                                    aria-hidden="true"></span>
+                                                Watch Trailer</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </div>
-                @endforeach
+                            </li>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
@@ -137,234 +180,38 @@
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre">
+                                    @if (!isset($filmsSearch))
+                                        @foreach ($movies as $movie)
+                                            <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+                                                <div class="slider-info">
+                                                    <div class="img-circle">
+                                                        <a href="/genre">
 
-                                                    <img src="assets/images/m6.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
+                                                            <img src="{{ $movie->Poster }}" class="img-fluid"
+                                                                alt="author image">
+                                                            <div class="overlay-icon">
 
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
+                                                                <span class="fa fa-play video-icon"
+                                                                    aria-hidden="true"></span>
+                                                            </div>
+                                                        </a>
                                                     </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Long Shot</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
+                                                    <div class="message">
+                                                        <p>{{ $movie->type }}</p>
+                                                        <a class="author-book-title"
+                                                            href="/genre">{{ $movie->title }}</a>
+                                                        <h4> <span class="post"><span class="fa fa-clock-o"> </span>
+                                                                {{ $movie->duration }}
+                                                            </span>
 
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/m5.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
+                                                            <span class="post fa fa-heart text-right"></span>
+                                                        </h4>
                                                     </div>
-                                                </a>
+                                                </div>
+
                                             </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Jumanji</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/m4.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Little Women</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--//set1-->
-                                    <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/m1.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Rocketman</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/m2.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Doctor Sleep</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/m3.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Knives Out</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--//set1-->
-                                    <!--/set1-->
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/n1.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">No Time to Die</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/n2.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Mulan</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
-                                        <div class="slider-info">
-                                            <div class="img-circle">
-                                                <a href="/genre"><img src="assets/images/n3.jpg" class="img-fluid"
-                                                        alt="author image">
-                                                    <div class="overlay-icon">
-
-                                                        <span class="fa fa-play video-icon" aria-hidden="true"></span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="message">
-                                                <p>English</p>
-                                                <a class="author-book-title" href="/genre">Free Guy</a>
-                                                <h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr
-                                                        4min
-
-                                                    </span>
-
-                                                    <span class="post fa fa-heart text-right"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                                        @endforeach
+                                    @endif
                                     <!--//set1-->
                                 </div>
                             </div>
