@@ -8,6 +8,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SocialiteController;
 use App\Models\User;
 use Spatie\Permission\Commands\Show;
@@ -102,6 +103,12 @@ Route::get("seat", function () {
     return view("seat.index");
 });
 
-Route::get("single_film", [
+Route::get("single_film/{id}", [
     MovieController::class, "show"
 ]);
+
+
+
+Route::post("/reserve/{id}", [
+    ReservationController::class, "reserve"
+])->name("reserve");

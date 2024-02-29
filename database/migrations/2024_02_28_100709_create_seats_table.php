@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->boolean('isbooking')->default(false);
+            $table->float('price');
             $table->timestamps();
             $table->foreignId('zone_id')->reference('id')->on('zones')->nullable();
         });

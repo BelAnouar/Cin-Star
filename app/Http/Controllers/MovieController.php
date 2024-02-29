@@ -37,10 +37,15 @@ class MovieController extends Controller
         }
     }
 
-    public function show()
+    public function show($id)
     {
-        $movie = Movie::with('salle', "salle.zones", "salle.zones.seats")->find(1);
+        $movie = Movie::with('salle', "salle.zones", "salle.zones.seats")->find($id);
 
         return view("single_page_film", ["movie" => $movie]);
+    }
+
+    public function store(Request $request)
+    {
+        dd($request);
     }
 }

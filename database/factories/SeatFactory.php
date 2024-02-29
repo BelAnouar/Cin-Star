@@ -20,6 +20,7 @@ class SeatFactory extends Factory
         return [
 
             'name' => $this->faker->unique()->word,
+            'price' => $this->faker->randomFloat(2, 10, 100),
             'isbooking' => $this->faker->boolean,
 
         ];

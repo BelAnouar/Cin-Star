@@ -17,6 +17,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreignId('salle_id')->references('id')->on('salle_de_cinemas')->nullable();
+            $table->foreignId('user_id')->references('id')->on('users')->nullable();
         });
     }
 
