@@ -7,9 +7,12 @@ use App\Http\Controllers\HomeController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FilmController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use Spatie\Permission\Commands\Show;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +33,7 @@ Route::get('genre', function () {
     return view('genre');
 });
 
+Route::get('/' , [MovieController::class , "displayMovies"])->name('displayMovies');
 
 Route::get("/featch", [MovieController::class, "fetchApiMovie"]);
 Route::get("auth/google", [SocialiteController::class, "redirectToGoogle"]);
@@ -47,6 +51,10 @@ Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect'])
 
 Route::get('/auth/callback', [ProviderController::class, 'callback']);
 
+
+// notif
+Route::get('send', [ProviderController::class, 'callback']);
+// notif
 // Route::get('/auth/callback', function () {
 //     $githubUser = Socialite::driver('github')->user();
 
@@ -70,6 +78,23 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+// admin routes
+Route::get('/admin/statistics', [FilmController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin', [FilmController::class, 'allFilm'])->name('admin.allFilm');
+Route::put('/admin/{id}', [FilmController::class, 'update'])->name('film.update');
+Route::post('/admin/store', [FilmController::class, 'store'])->name('film.store');
+Route::delete('/admin/{id}', [FilmController::class, 'destroy'])->name('film.delete');
+// end admin routes
+
+
+// statistics start
+Route::get('/statistics', function () {
+    return view('admin.statistics');
+});
+// statistics end
+
+
 require __DIR__ . '/auth.php';
 
 
@@ -78,11 +103,14 @@ Route::get("seat", function () {
     return view("seat.index");
 });
 
-Route::get("single_film", function () {
-    return view("single_page_film");
-});
+Route::get("single_film/{id}", [MovieController::class, "show"])->name('singlePage');
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/', [MovieController::class, 'displayMovies']);
+
+
+Route::post("/reserve/{id}", [
+    ReservationController::class, "reserve"
+])->name("reserve");
+
 Route::get('/search', [MovieController::class, 'search'])->name('movie.search');
-Route::get('/notify', [HomeController::class, 'notify']);
+// Route::get('/', [HomeController::class, 'index']);
+Route::get('/notify', [HomeController::class, 'sendnotification']);

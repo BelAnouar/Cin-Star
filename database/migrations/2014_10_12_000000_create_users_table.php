@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('social')->nullable();
             $table->string('social_id')->nullable();
 
-            $table->enum('role', ['Administrateur', 'Membre'])->default('Membre');
+            $table->enum('role', ['admin', 'membre'])->default('membre');
             $table->rememberToken();
             $table->timestamps();
         });

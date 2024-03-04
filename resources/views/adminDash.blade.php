@@ -468,7 +468,6 @@
             });
         });
     </script>
-    </head>
 
     <body>
         <div class="mt-20 ml-64 container-xl" style="width: 1025px;">

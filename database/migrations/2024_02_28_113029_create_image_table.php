@@ -11,21 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notifications', function (Blueprint $table) {
+        Schema::create('image', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->morphs('notifiable');
-            $table->text('message');
-            $table->timestamp('read_at')->nullable();
+            $table->text('image');
+            $table->foreignId('movie_id')->constrained();
             $table->timestamps();
         });
     }
 
-    /*
+    /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('notifications');
+        Schema::dropIfExists('image');
     }
 };

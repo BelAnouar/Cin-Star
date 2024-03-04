@@ -15,10 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string("image");
             $table->string('title');
-            $table->longText('description');
-            $table->string('Genre');
+            $table->string('year');
             $table->string('duration');
             $table->string("release_date");
+            $table->string("Awards");
+            $table->string('genre');
+            $table->string('acteur');
+            $table->string('Poster');
+            $table->string('type');
+            $table->longText('description');
             $table->timestamps();
             $table->foreignId('salleId')->reference('id')->on('salle_de_cinemas')->nullable();
         });

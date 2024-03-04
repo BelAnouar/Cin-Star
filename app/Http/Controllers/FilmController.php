@@ -41,15 +41,14 @@ class FilmController extends Controller
             'filmName' => $request->filmName,
         ]);
 
-        return redirect()->route('film.allfilm');
+        return view('film.allfilm' , compact);
     }
 
     public function destroy($id)
     {
         $film = Film::findOrFail($id);
         $film->delete();
-
+        
         return redirect()->route('film.allfilm');
     }
 }
-

@@ -54,7 +54,7 @@
                         @foreach ($filmsSearch as $movie)
                             <div class="item vhny-grid w-45 h-45">
                                 <div class="box16 mb-0">
-                                    <a href="/genre">
+                                    <a href="{{ route('singlePage', ['id' => $movie->id]) }}">
                                         <figure>
                                             <img class="img-fluid" src="{{ $movie->Poster }}" alt="">
                                         </figure>
@@ -70,10 +70,13 @@
                                         <span class="fa fa-play video-icon" aria-hidden="true"></span>
                                     </a>
                                 </div>
-                                <h3> <a class="title-gd" href="/genre">{{ $movie->title }}</a></h3>
+                                <h3> <a class="title-gd"
+                                        href="{{ route('singlePage', ['id' => $movie->id]) }}">{{ $movie->title }}</a>
+                                </h3>
                                 <p>{{ $movie->description }}</p>
                                 <div class="button-center text-center mt-4">
-                                    <a href="{{route('')}}" class="btn watch-button">Reserve now</a>
+                                    <a href="{{ route('singlePage', ['id' => $movie->id]) }}"
+                                        class="btn watch-button">Reserve now</a>
                                 </div>
                             </div>
                         @endforeach
@@ -100,27 +103,28 @@
                             @endphp
                             <div class="item vhny-grid">
                                 <div class="box16 mb-0">
-                                    <a href="/genre">
+                                    <a href="{{ route('singlePage', ['id' => $movie->id]) }}">
                                         <figure>
                                             <img class="img-fluid" src="{{ $movie->Poster }}" alt="">
                                         </figure>
                                         <div class="box-content">
                                             <h4> <span class="post"><span class="fa fa-clock-o"> </span>
                                                     {{ $movie->duration }}
-
-                                                </span>
-
-                                                <span class="post fa fa-heart text-right"></span>
+                                                    <span class="text-right post fa fa-heart"></span>
                                             </h4>
                                         </div>
                                         <span class="fa fa-play video-icon" aria-hidden="true"></span>
                                     </a>
                                 </div>
-                                <h3> <a class="title-gd" href="/genre">{{ $movie->title }}</a></h3>
+                                <h3> <a class="title-gd"
+                                        href="{{ route('singlePage', ['id' => $movie->id]) }}">{{ $movie->title }}</a>
+                                </h3>
                                 <p>{{ $movie->description }}</p>
-                                <div class="button-center text-center mt-4">
-                                    <a href="" class="btn watch-button">Watch now</a>
+                                <div class="mt-4 text-center button-center">
+                                    <a href="{{ route('singlePage', ['id' => $movie->id]) }}"
+                                        class="btn watch-button">Reserve now</a>
                                 </div>
+
                             </div>
                         @endforeach
                     </div>
@@ -133,32 +137,31 @@
     <section class="w3l-mid-slider position-relative">
         <div class="companies20-content">
             <div class="owl-mid owl-carousel owl-theme">
-                @if (!isset($filmsSearch))
-                    @foreach ($movies as $movie)
-                        @php
-                            if ($loop->iteration < 9 || $loop->iteration > 15) {
-                                continue;
-                            }
-                        @endphp
-                        <div class="item"
-                            style="background: url({{ $movie->Poster }}) no-repeat center;background-size: cover">
-                            <li>
-                                <div class="slider-info mid-view bg bg2">
-                                    <div class="container">
-                                        <div class="mid-info">
-                                            <span class="sub-text">{{ $movie->genre }}</span>
-                                            <h3>{{ $movie->title }}</h3>
-                                            <p>{{ $movie->year }}‧{{ $movie->type }} ‧ {{ $movie->duration }}</p>
-                                            <a class="watch" href="/genre"><span class="fa fa-play"
-                                                    aria-hidden="true"></span>
-                                                Watch Trailer</a>
-                                        </div>
+                @dd($movies)
+                @foreach ($movies as $movie)
+                    @php
+                        if ($loop->iteration < 9 || $loop->iteration > 15) {
+                            continue;
+                        }
+                    @endphp
+                    <div class="item">
+                        <li>
+                            <div class="slider-info mid-view bg bg2"
+                                style="background: url({{ $movie->Poster }}) no-repeat center;background-size:cover;min-height:500px;">
+                                <div class="container">
+                                    <div class="mid-info">
+                                        <span class="sub-text">{{ $movie->type }}</span>
+                                        <h3>{{ $movie->title }}</h3>
+                                        <p>{{ $movie->year }} {{ $movie->genre }} - {{ $movie->duration }}</p>
+                                        <a class="watch" href="{{ route('singlePage', ['id' => $movie->id]) }}"><span
+                                                class="fa fa-play" aria-hidden="true"></span>
+                                            Watch Trailer</a>
                                     </div>
                                 </div>
-                            </li>
-                        </div>
-                    @endforeach
-                @endif
+                            </div>
+                        </li>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -177,6 +180,7 @@
                             <div class="clear"></div>
                         </ul>
                         <div class="resp-tabs-container hor_1">
+                            {{-- this data came from database --}}
                             <div class="albums-content">
                                 <div class="row">
                                     <!--/set1-->
@@ -185,7 +189,7 @@
                                             <div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
                                                 <div class="slider-info">
                                                     <div class="img-circle">
-                                                        <a href="/genre">
+                                                        <a href="{{ route('singlePage', ['id' => $movie->id]) }}">
 
                                                             <img src="{{ $movie->Poster }}" class="img-fluid"
                                                                 alt="author image">
@@ -199,7 +203,7 @@
                                                     <div class="message">
                                                         <p>{{ $movie->type }}</p>
                                                         <a class="author-book-title"
-                                                            href="/genre">{{ $movie->title }}</a>
+                                                            href="{{ route('singlePage', ['id' => $movie->id]) }}">{{ $movie->title }}</a>
                                                         <h4> <span class="post"><span class="fa fa-clock-o"> </span>
                                                                 {{ $movie->duration }}
                                                             </span>
@@ -212,7 +216,10 @@
                                             </div>
                                         @endforeach
                                     @endif
-                                    <!--//set1-->
+
+                                </div>
+                                <div class="">
+                                    {{ $movies->links() }}
                                 </div>
                             </div>
                             <div class="albums-content">

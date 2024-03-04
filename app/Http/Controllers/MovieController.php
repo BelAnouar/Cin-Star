@@ -34,13 +34,13 @@ class MovieController extends Controller
     }
 
     public function displayMovies(){
-        $movies = Movie::all();
+        $movies = Movie::paginate(6);
         return view('welcome', compact('movies'));
     }
     public function show()
     {
         $movie = Movie::with('salle', "salle.zones", "salle.zones.seats")->find(1);
-
+        // dd($movie);
         return view("single_page_film", ["movie" => $movie]);
     }
     public function search(Request $request)
