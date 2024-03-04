@@ -137,7 +137,6 @@
     <section class="w3l-mid-slider position-relative">
         <div class="companies20-content">
             <div class="owl-mid owl-carousel owl-theme">
-                @dd($movies)
                 @foreach ($movies as $movie)
                     @php
                         if ($loop->iteration < 9 || $loop->iteration > 15) {

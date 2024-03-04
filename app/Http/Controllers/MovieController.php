@@ -45,6 +45,7 @@ class MovieController extends Controller
     }
     public function search(Request $request)
     {
+        $movies = Movie::paginate(6);
         $searchData = $request->input('search');
         $filmsSearch = Movie::where('title', 'like', '%' . $searchData . '%')->get();
                     // ->orWhereHas('genre', function ($query) use ($searchData) {
@@ -59,7 +60,7 @@ class MovieController extends Controller
                    
                     // dd($filmsSearch);
 
-         return view('welcome', compact('filmsSearch'));
+         return view('welcome', compact('filmsSearch', 'movies'));
         // dd($filmsSearch);
       
     }
