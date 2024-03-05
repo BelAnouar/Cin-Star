@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
+            $table->string("image");
             $table->string('title');
             $table->string('year');
             $table->string('duration');
@@ -24,6 +25,7 @@ return new class extends Migration
             $table->string('type');
             $table->longText('description');
             $table->timestamps();
+            $table->foreignId('salleId')->reference('id')->on('salle_de_cinemas')->nullable();
         });
     }
 

@@ -99,4 +99,15 @@ class MovieController extends Controller
     return redirect()->back();
 }
 
+
+    public function displayMovies(){
+        $movies = Movie::all();
+        return view('welcome', compact('movies'));
+    }
+    public function show()
+    {
+        $movie = Movie::with('salle', "salle.zones", "salle.zones.seats")->find(1);
+
+        return view("single_page_film", ["movie" => $movie]);
+    }
 }
